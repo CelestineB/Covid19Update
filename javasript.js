@@ -83,7 +83,9 @@ function createMarker(confirmed, death, recovered, active, totalSummary, latlng)
                 
                 <div class='store-marker-container'>
     <div class='store-marker-name-container'>
-        <div class='store-marker-name'> New Confirmed: ${totalSummary['NewConfirmed']}</div> 
+        <div class='store-marker-name'>
+        Country:${totalSummary["Countries"]}
+         New Confirmed: ${totalSummary['NewConfirmed']}</div> 
          <div class='store-marker-time'>
          New Recovered: ${totalSummary['NewRecovered']}<br>
          New Death:${totalSummary['NewDeaths']}
