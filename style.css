@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title {
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.formArea {
+    position: absolute;
+    width: 300px;
+    left: 10%;
+    top: 20%;
+    bottom: 0;
+    background-color: transparent;
+}
+
+.searchBar {
+    position: relative;
+    height: 10%;
+    width: 100%;
+}
+
+#search {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+input {
+    height: 90%;
+    width: 99%;
+    margin-left: 2px;
+    background: #454E53;
+    border: 1px solid #979797;
+    border-radius: 44px;
+    padding-left: .5rem;
+    font-size: 1.2rem;
+    color: #fff;
+    color: #fff;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+.displayAreas {
+    height: 80%;
+    width: 100%;
+    background: #FEFFFE;
+    border-radius: 35px;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1.1rem;
+    overflow-y: scroll;
+}
+
+.store-container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    border-bottom: 2px solid #ddd;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+}
+
+.store-container-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.store-container-list:hover {
+    background-color: #ddd;
+}
+
+.store-number {
+    border-radius: 100%;
+    background: #454E53;
+    color: #cf117f;
+    padding: 5px;
+}
+
+.address {
+    padding-top: 1.2rem;
+    flex-grow: 1;
+}
+
+.store-address {
+    font-family: Average Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin: 0;
+    color: #514C4C;
+}
+
+.store-address>span {
+    display: block;
+}
+
+.store-phone-number {
+    font-family: Average Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: .8rem;
+    color: #B5ADAD;
+}
+
+
+/* Marker styling */
+
+.store-marker-container {
+    min-width: 10rem;
+    height: 8rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.store-marker-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, .8)
+}
+
+.store-marker-address {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.store-marker-address a {
+    text-decoration: none;
+    color: black;
+}
+
+.store-marker-address i {
+    color: #fff;
+}
+
+.store-marker-address span {
+    padding: .3rem;
+    border-radius: 50%;
+    background-color: #128bc4;
+    margin-right: 2px;
+}
+
+.store-marker-phone i {
+    color: #fff;
+}
+
+.store-marker-phone span {
+    padding: .3rem;
+    border-radius: 50%;
+    background-color: #128bc4;
+    margin-right: 2px;
+}
+
+.store-container-background {
+    display: flex;
+    flex-grow: 1;
+    border-radius: 18px;
+    padding-left: 3px;
+    padding-right: 3px;
+    transition: all 2s ease-in-out;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.store-container-background:hover {
+    background-color: #ccc;
+}
