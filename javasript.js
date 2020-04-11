@@ -126,7 +126,7 @@ function createMarker(confirmed, death, recovered, active, totalSummary, latlng)
 }
 
 function searchStores() {
-    var currentCountry = document.getElementById('search-input').value.trim();
+    var currentCountry = document.getElementById('input').value.trim();
     if (currentCountry) {
         getCountrySlug(currentCountry);
     }
