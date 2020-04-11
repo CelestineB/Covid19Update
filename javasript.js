@@ -7,7 +7,12 @@ $(document).ready(function() {
     getAllCountries();
     $(document).on('click', '.store-container', function() {
         setMarkerData($(this).data('slug'));
-        //console.log($(this).data('slug'))
+        document.querySelector('.displayAreas').style.display = "none";
+        setTimeout(function() {
+            document.querySelector('.displayAreas').style.display = "block";
+
+        }, 5000);
+
     });
 });
 
@@ -58,7 +63,7 @@ function showStoresMarkers(countryData) {
         alert("No Data Found");
     } else {
         var currentData = countryData[countryData.length - 1];
-        //console.log("this" + currentData);
+        //console.log("this" + currentData[countryData]);
         var lat = currentData['Lat'];
         var long = currentData['Lon'];
         var confirmed = currentData['Confirmed'];
@@ -68,6 +73,7 @@ function showStoresMarkers(countryData) {
         var bounds = new google.maps.LatLngBounds();
         var latLong = new google.maps.LatLng(lat, long);
         var totalSummary = getSummaryByCountry(currentData['Country']);
+        // console.log(totalSummary);
         createMarker(confirmed, death, recovered, active, totalSummary, latLong);
         bounds.extend(latLong);
         map.fitBounds(bounds);
@@ -78,13 +84,13 @@ function showStoresMarkers(countryData) {
 
 function createMarker(confirmed, death, recovered, active, totalSummary, latlng) {
     var icon = "./images/MapMarker_Marker_Inside_Pink.png";
-
+    // console.log(totalSummary)
     var html = `
                 
                 <div class='store-marker-container'>
     <div class='store-marker-name-container'>
         <div class='store-marker-name'>
-        Country:${totalSummary["Countries"]}
+     
          New Confirmed: ${totalSummary['NewConfirmed']}</div> 
          <div class='store-marker-time'>
          New Recovered: ${totalSummary['NewRecovered']}<br>
