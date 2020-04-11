@@ -113,6 +113,7 @@ function createMarker(confirmed, death, recovered, active, totalSummary, latlng)
     var marker = new google.maps.Marker({
         map: map,
         position: latlng,
+        icon: './image/MapMarker_Marker_Inside_Pink .png'
     });
 
     google.maps.event.addListener(marker, 'click', function() {
