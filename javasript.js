@@ -7,11 +7,6 @@ $(document).ready(function() {
     getAllCountries();
     $(document).on('click', '.store-container', function() {
         setMarkerData($(this).data('slug'));
-        document.querySelector('.displayAreas').style.display = "none";
-        setTimeout(function() {
-            document.querySelector('.displayAreas').style.display = "block";
-
-        }, 5000);
 
     });
 });
@@ -31,28 +26,29 @@ function initMap() {
 }
 
 function displayStores(countries) {
-    allcountries = countries['Countries']
+    allcountries = countries['Countries'];
+    console.log(allcountries)
     var storesHtml = '';
     var count = 1;
     for (var country of allcountries) {
         storesHtml += `  <div class="store-container-background">
-                      <div class="store-container" data-slug=${country['Slug']}>
-                       <div class="store-container-list">
-                              <div class="address">
-                                  <div class="store-address">
-                                      <span class="store-address">${country['Country']}</span>
-                                  </div>
-                              </div>
-                              <div class="store-number-container">
-                                  <div class="store-number">
-                                      ${country['TotalConfirmed']}
-                                  </div>
-                              </div>
-                             </div> 
-                          </div>
-                      </div>
-                     
-                      `;
+                       <div class="store-container" data-slug=${country['Slug']}>
+                        <div class="store-container-list">
+                               <div class="address">
+                                   <div class="store-address">
+                                       <span class="store-address">${country['Country']}</span>
+                                   </div>
+                               </div>
+                               <div class="store-number-container">
+                                   <div class="store-number">
+                                       ${country['TotalConfirmed']}
+                                   </div>
+                               </div>
+                              </div> 
+                           </div>
+                       </div>
+                      
+                       `;
 
         document.querySelector('.displayAreas').innerHTML = storesHtml;
     }
@@ -204,7 +200,7 @@ function ajaxCall(url, callBack = undefined) {
         },
         success: function(data) {
             callBack(data);
-            // console.log(data);
+            console.log("this" + data)
         },
         complete: function() {}
     });
