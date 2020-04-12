@@ -137,8 +137,8 @@ function clearLocations() {
 }
 
 function getAllCountries() {
-    const url = "https://api.covid19api.com/summary";
-    ajaxCall(url, displayStores)
+
+    ajaxCall("https://api.covid19api.com/summary", displayStores)
         //  displayStores(authors);
 
 
