@@ -44,6 +44,7 @@ body {
     color: #fff;
     cursor: pointer;
     align-items: center;
+    padding: 5px;
 }
 
 #search-input {
@@ -104,7 +105,7 @@ body {
 .store-number {
     border-radius: 100%;
     background: #454E53;
-    color: #cf117f;
+    color: #fff;
     padding: 5px;
 }
 
