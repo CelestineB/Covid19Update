@@ -7,11 +7,6 @@ $(document).ready(function() {
     getAllCountries();
     $(document).on('click', '.store-container', function() {
         setMarkerData($(this).data('slug'));
-Const areaform = document.querySelector('#formArea');
-areaform.style.display = 'none';
-setTimeout(function (){
-areaform.style.display = 'block';
-},5000);
 
     });
 });
